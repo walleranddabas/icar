@@ -1,0 +1,63 @@
+
+#photo {
+	background-image: url("images/voiture_background.jpg");
+	height: 650px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #E8FFFF;
+	font-family: Helvetica;
+	text-align: center;
+	padding-top: 250px;
+}
+.space {
+	padding-top: 20px;
+}
+
+.row {
+	color: #193441;
+	font-family: Helvetica;
+	text-align: center;
+	padding-top: 50px;
+}
+.row i {
+	font-size: 40px;
+}
+#footer {
+	background-color: black;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 60px;
+	margin: auto;
+
+}
+/*#footer p {
+	color: #fcf9f9;
+	padding-left: 80px;
+}*/
+#social {
+	color: white;
+	margin-bottom: 300px;
+
+}
+#copyright {
+	color: #a5aaaa;
+	padding-top: 40px;
+}
+#contact {
+	color: white;
+	font-size: 20px;
+	padding-top: 20px;
+}
+.video  {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.video p {
+	font-size: 20px;
+	color: #193441;
+}
+.video iframe {
+	width: 700px;
+	height: 400px;
+
+}
