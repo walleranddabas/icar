@@ -48,9 +48,9 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="contact.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -64,44 +64,48 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div id="photo">
-	<h1>Louez une voiture pour vos événements</h1>
-	<h2>Et partez en week-end!</h2>
-	<div class="space"></div>
-	<button type="button" class="btn btn-primary">GO</button>
-</div>
-
+<div class="space"></div>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-3 col-xs-6">	
-			<i class="fa fa-users" aria-hidden="true"></i>
-			<p>Discutez avec vos proches</p>
-		</div>
-		<div class="col-md-3 col-xs-6">
-			<i class="fa fa-car" aria-hidden="true"></i>
-			<p>Trouvez une voiture à coté de chez vous</p>
-		</div>
-		<div class="col-md-3 col-xs-6">
-			<i class="fa fa-map-marker" aria-hidden="true"></i>
-			<p>La voiture adapté à vos besoins</p>
-		</div>
-		<div class="col-md-3 col-xs-6">	
-			<i class="fa fa-credit-card" aria-hidden="true"></i>
-			<p>Payez en ligne</p>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-sm-6">
+    <div id="map" style="width: 100%; height: 400px;"></div>
 
-	<div class="video">
-		<p class="space">Présentation de ICar en vidéo!</p>
-		<iframe classe="space" width="560" height="315" src="https://www.youtube.com/embed/zDWXGvXQFos" frameborder="0" allowfullscreen></iframe>
-	</div>
-</div>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+
+  var myOptions = {
+      zoom: 14,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{"elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"road","elementType":"labels.icon"},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"water","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"poi.park","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]}]
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+  });
+</script>
+    </div>
+    <div class="col-sm-6">
+      <h1>Contact</h1>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i>20 rue des poissons frais</p>
+      <p>
+      <i class="fa fa-phone" aria-hidden="true"></i> 060000000</p>
+    </div>
+  </div>
+</div>  
+
+
 
 <div id="footer">
 	<ul class="list-inline">
 		<div class="col-md-4">
-			<div id="social">
+			<div class="social">
 				<li><i class="fa fa-facebook-square" aria-hidden="true"><a href="http://facebook.com"> Facebook</a></i></li>
 				<li><i class="fa fa-twitter-square" aria-hidden="true"><a href="http://twitter.com"> Twitter</a></i></li>
 			</div>	
